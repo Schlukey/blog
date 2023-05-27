@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+
+<h1>Home</h1>
+<p> <%= startText %></p>
+    <% postHistory.forEach(function(postHistory){ %>
+        <ul>
+            <h1> <%= postHistory.title %> </h1>
+            <p> <%= postHistory.body.substring(0, 100) + ' ...' %> <a href="/post/<%= postHistory.title %>">Read more...</a></p>
+        </ul>
+        <% console.log(postHistory) %>
+    <% }); %>
+
+<%- include('partials/footer') -%>
